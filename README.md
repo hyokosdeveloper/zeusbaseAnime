@@ -1,2 +1,7 @@
 # zeusbaseAnime
-Animation Framework based off of ThreeJS, GreenSock, and a few other fancy CSS libs
+====================================================
+
+**Animation libraries and examples for javascript and css animations**
+
+
+![App Icon](https://github.com/hyokosdeveloper/zeusbaseAnime/assets/images/app_icon@72x.png "App Icon")
