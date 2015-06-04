@@ -1,0 +1,2059 @@
+/* Reset
+----------------------------------------------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; backound: transparent; } body { line-height: 1; } ol, ul { list-style: none; } blockquote, q { quotes: none; } blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; } :focus { outline: 0; } ins { text-decoration: none; } del { text-decoration: line-through; } table { border-collapse: collapse; border-spacing: 0; } a { text-decoration: none; }
+
+
+body {
+	font-size: ;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background: url(../images/bg.jpg);
+}
+h1 {
+	font-size:25px;
+	font-weight:bold;
+	color:#555454;
+	text-shadow:0px 1px 0px #fff;
+
+	margin: 70px 0 25px 0;
+}
+
+
+/* ----------------------------------------------------------------------------------------------------
+Grid to hold button layout
+----------------------------------------------------------------------------------------------------*/
+
+.container { position:relative; width:566px; margin:0 auto; padding:0; }
+.container-elements { width:700px; margin:0 auto; }
+.container .column, .container .columns, #small-buttons .columns { float:left; display:inline; margin-left: 10px; margin-right: 10px;}
+.container .one.column      { width:126px; }
+.container .two.columns     { width:93px;  }
+.container .three.columns   { width:134px; }
+.container .four.columns    { width:125px; }
+.container .full.column     { width:546px; }
+
+#small-buttons {
+	width:100px;
+	margin:0 auto;
+	margin-bottom:100px;
+}
+.small-col-1 { width:30px; }
+.small-col-2 { width:30px; }
+
+
+/* ----------------------------------------------------------------------------------------------------
+Master Button Style - Do not change or button will mess up!
+----------------------------------------------------------------------------------------------------*/
+
+.button {
+	width: 122px;
+	
+	float:left;
+	margin-bottom: 15px;
+
+	font-size:14px;
+	font-weight:bold;
+
+	line-height:31px;
+	text-align:center;
+
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+}
+.small-button {
+	width:auto;
+	height:auto;
+}
+.small-button span {
+	-webkit-box-shadow:
+		1px 0px 0px rgba(255,255,255,.01),
+		2px 0px 0px rgba(255,255,255,.01);
+	-moz-box-shadow:
+		1px 0px 0px rgba(255,255,255,.01),
+		2px 0px 0px rgba(255,255,255,.01);
+	box-shadow:
+		1px 0px 0px rgba(255,255,255,.01),
+		2px 0px 0px rgba(255,255,255,.01);
+}
+
+/* ----------------------------------------------------------------------------------------------------
+Base Button Colors - Grey, Blue, Green, Black, Red & Purple
+----------------------------------------------------------------------------------------------------*/
+
+.grey {
+	background: -webkit-linear-gradient(top, #f4f5f7 0%,#e1e2e6 90%,#cfd1d4 100%);
+	background: -moz-linear-gradient(top, #f4f5f7 0%,#e1e2e6 90%,#cfd1d4 100%);
+	background: -o-linear-gradient(top, #f4f5f7 0%,#e1e2e6 90%,#cfd1d4 100%);
+	background: -ms-linear-gradient(top, #f4f5f7 0%,#e1e2e6 90%,#cfd1d4 100%);
+	background: linear-gradient(top, #f4f5f7 0%,#e1e2e6 90%,#cfd1d4 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f5f7', endColorstr='#cfd1d4',GradientType=0 );
+	border:1px solid #949494;
+
+	-webkit-box-shadow:
+		inset 0px 1px 0px #fff,
+		0px 1px 1px rgba(0,0,0,.15);
+	-moz-box-shadow:
+		inset 0px 1px 0px #fff,
+		0px 1px 1px rgba(0,0,0,.15);
+	box-shadow:
+		inset 0px 1px 0px #fff,
+		0px 1px 1px rgba(0,0,0,.15);
+
+	color: #555454;
+	text-shadow:0px 1px 0px #fff;
+}
+.blue {
+	background: -webkit-linear-gradient(top, #4db9fe 0%,#339be3 90%,#2786c9 100%);
+	background: -moz-linear-gradient(top, #4db9fe 0%,#339be3 90%,#2786c9 100%);
+	background: -o-linear-gradient(top, #4db9fe 0%,#339be3 90%,#2786c9 100%);
+	background: -ms-linear-gradient(top, #4db9fe 0%,#339be3 90%,#2786c9 100%);
+	background: linear-gradient(top, #4db9fe 0%,#339be3 90%,#2786c9 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4db9fe', endColorstr='#2786c9',GradientType=0 );
+	border:1px solid #0f5ea9;
+
+	-webkit-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	-moz-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+
+	color: #fff;
+	text-shadow:0px -1px 0px rgba(0,0,0,.22);
+}
+.green {
+	background: -webkit-linear-gradient(top, #25c652 0%,#2aa640 90%,#298f35 100%);
+	background: -moz-linear-gradient(top, #25c652 0%,#2aa640 90%,#298f35 100%);
+	background: -o-linear-gradient(top, #25c652 0%,#2aa640 90%,#298f35 100%);
+	background: -ms-linear-gradient(top, #25c652 0%,#2aa640 90%,#298f35 100%);
+	background: linear-gradient(top, #25c652 0%,#2aa640 90%,#298f35 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#25c652', endColorstr='#298f35',GradientType=0 );
+	border:1px solid #0f681b;
+
+	-webkit-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	-moz-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+
+	color: #fff;
+	text-shadow:0px -1px 0px rgba(0,0,0,.22);
+}
+.black {
+	background: -webkit-linear-gradient(top, #777777 0%,#585858 90%,#454545 100%);
+	background: -moz-linear-gradient(top, #777777 0%,#585858 90%,#454545 100%);
+	background: -o-linear-gradient(top, #777777 0%,#585858 90%,#454545 100%);
+	background: -ms-linear-gradient(top, #777777 0%,#585858 90%,#454545 100%);
+	background: linear-gradient(top, #777777 0%,#585858 90%,#454545 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#777777', endColorstr='#454545',GradientType=0 );
+	border:1px solid #323232;
+
+	-webkit-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	-moz-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+
+	color: #fff;
+	text-shadow:0px -1px 0px rgba(0,0,0,.22);
+}
+.red {
+	background: -webkit-linear-gradient(top, #dc4646 0%,#a73636 88%,#8e2d2d 100%);
+	background: -moz-linear-gradient(top, #dc4646 0%,#a73636 88%,#8e2d2d 100%);
+	background: -o-linear-gradient(top, #dc4646 0%,#a73636 88%,#8e2d2d 100%);
+	background: -ms-linear-gradient(top, #dc4646 0%,#a73636 88%,#8e2d2d 100%);
+	background: linear-gradient(top, #dc4646 0%,#a73636 88%,#8e2d2d 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dc4646', endColorstr='#8e2d2d',GradientType=0 );
+	border: 1px solid #850000;
+
+	-webkit-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	-moz-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+
+	color: #fff;
+	text-shadow:0px -1px 0px rgba(0,0,0,.22);
+}
+.purple {
+	background: -webkit-linear-gradient(top, #e193f2 0%,#d072e4 90%,#ba5fce 100%);
+	background: -moz-linear-gradient(top, #e193f2 0%,#d072e4 90%,#ba5fce 100%);
+	background: -o-linear-gradient(top, #e193f2 0%,#d072e4 90%,#ba5fce 100%);
+	background: -ms-linear-gradient(top, #e193f2 0%,#d072e4 90%,#ba5fce 100%);
+	background: linear-gradient(top, #e193f2 0%,#d072e4 90%,#ba5fce 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e193f2', endColorstr='#ba5fce',GradientType=0 );
+	border: 1px solid #9c3cb1;
+
+	-webkit-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	-moz-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+
+	color: #fff;
+	text-shadow:0px -1px 0px rgba(0,0,0,.22);
+}
+
+/* ----------------------------------------------------------------------------------------------------
+Button Hover Colors, add the corresponding class to change the color on hover - .{color-name}-hover
+----------------------------------------------------------------------------------------------------*/
+
+.blue-hover:hover {
+	background: -webkit-linear-gradient(top, #4db9fe 0%,#339be3 90%,#2786c9 100%);
+	background: -moz-linear-gradient(top, #4db9fe 0%,#339be3 90%,#2786c9 100%);
+	background: -o-linear-gradient(top, #4db9fe 0%,#339be3 90%,#2786c9 100%);
+	background: -ms-linear-gradient(top, #4db9fe 0%,#339be3 90%,#2786c9 100%);
+	background: linear-gradient(top, #4db9fe 0%,#339be3 90%,#2786c9 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4db9fe', endColorstr='#2786c9',GradientType=0 );
+	border:1px solid #0f5ea9;
+
+	-webkit-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	-moz-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+
+	color: #fff;
+	text-shadow:0px -1px 0px rgba(0,0,0,.22);
+}
+.green-hover:hover {
+	background: -webkit-linear-gradient(top, #25c652 0%,#2aa640 90%,#298f35 100%);
+	background: -moz-linear-gradient(top, #25c652 0%,#2aa640 90%,#298f35 100%);
+	background: -o-linear-gradient(top, #25c652 0%,#2aa640 90%,#298f35 100%);
+	background: -ms-linear-gradient(top, #25c652 0%,#2aa640 90%,#298f35 100%);
+	background: linear-gradient(top, #25c652 0%,#2aa640 90%,#298f35 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#25c652', endColorstr='#298f35',GradientType=0 );
+	border:1px solid #0f681b;
+
+	-webkit-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	-moz-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+
+	color: #fff;
+	text-shadow:0px -1px 0px rgba(0,0,0,.22);
+}
+.black-hover:hover {
+	background: -webkit-linear-gradient(top, #777777 0%,#585858 90%,#454545 100%);
+	background: -moz-linear-gradient(top, #777777 0%,#585858 90%,#454545 100%);
+	background: -o-linear-gradient(top, #777777 0%,#585858 90%,#454545 100%);
+	background: -ms-linear-gradient(top, #777777 0%,#585858 90%,#454545 100%);
+	background: linear-gradient(top, #777777 0%,#585858 90%,#454545 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#777777', endColorstr='#454545',GradientType=0 );
+	border:1px solid #323232;
+
+	-webkit-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	-moz-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+
+	color: #fff;
+	text-shadow:0px -1px 0px rgba(0,0,0,.22);
+}
+.red-hover:hover {
+	background: -webkit-linear-gradient(top, #dc4646 0%,#a73636 88%,#8e2d2d 100%);
+	background: -moz-linear-gradient(top, #dc4646 0%,#a73636 88%,#8e2d2d 100%);
+	background: -o-linear-gradient(top, #dc4646 0%,#a73636 88%,#8e2d2d 100%);
+	background: -ms-linear-gradient(top, #dc4646 0%,#a73636 88%,#8e2d2d 100%);
+	background: linear-gradient(top, #dc4646 0%,#a73636 88%,#8e2d2d 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dc4646', endColorstr='#8e2d2d',GradientType=0 );
+	border: 1px solid #850000;
+
+	-webkit-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	-moz-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+
+	color: #fff;
+	text-shadow:0px -1px 0px rgba(0,0,0,.22);
+}
+.purple-hover:hover {
+	background: -webkit-linear-gradient(top, #e193f2 0%,#d072e4 90%,#ba5fce 100%);
+	background: -moz-linear-gradient(top, #e193f2 0%,#d072e4 90%,#ba5fce 100%);
+	background: -o-linear-gradient(top, #e193f2 0%,#d072e4 90%,#ba5fce 100%);
+	background: -ms-linear-gradient(top, #e193f2 0%,#d072e4 90%,#ba5fce 100%);
+	background: linear-gradient(top, #e193f2 0%,#d072e4 90%,#ba5fce 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e193f2', endColorstr='#ba5fce',GradientType=0 );
+	border: 1px solid #9c3cb1;
+
+	-webkit-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	-moz-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+
+	color: #fff;
+	text-shadow:0px -1px 0px rgba(0,0,0,.22);
+}
+
+
+/* ----------------------------------------------------------------------------------------------------
+Divider colors, these create the colors for the button diviers, do not change the lines below!
+----------------------------------------------------------------------------------------------------*/
+
+.button span {
+	width:31px;
+	height:31px;
+	float: left;
+
+	background-image:url(../images/icons.png);
+	background-repeat:no-repeat;
+}
+
+.grey span,
+.grey.blue-hover span,
+.grey.green-hover span,
+.grey.black-hover span,
+.grey.red-hover span,
+.grey.purple-hover span {
+	-webkit-box-shadow:
+		1px 0px 0px #b7b9b9,
+		2px 0px 0px #fff;
+	-moz-box-shadow:
+		1px 0px 0px #b7b9b9,
+		2px 0px 0px #fff;
+	box-shadow:
+		1px 0px 0px #b7b9b9,
+		2px 0px 0px #fff;
+}
+.blue span,
+.blue.green-hover span,
+.blue.black-hover span,
+.blue.red-hover span,
+.blue.purple-hover span {
+	-webkit-box-shadow:
+		1px 0px 0px #2f87c3,
+		2px 0px 0px rgba(255,255,255,.35);
+	-moz-box-shadow:
+		1px 0px 0px #2f87c3,
+		2px 0px 0px rgba(255,255,255,.35);
+	box-shadow:
+		1px 0px 0px #2f87c3,
+		2px 0px 0px rgba(255,255,255,.35);
+}
+.green span,
+.green.blue-hover span,
+.green.black-hover span,
+.green.red-hover span,
+.green.purple-hover span, 
+.green.blue-hover:hover span {
+	-webkit-box-shadow:
+		1px 0px 0px #1b962f,
+		2px 0px 0px #2fcf63;
+	-moz-box-shadow:
+		1px 0px 0px #1b962f,
+		2px 0px 0px #2fcf63;
+	box-shadow:
+		1px 0px 0px #1b962f,
+		2px 0px 0px #2fcf63;
+}
+.black span,
+.black.blue-hover span,
+.black.green-hover span,
+.black.red-hover span,
+.black.purple-hover span {
+	-webkit-box-shadow:
+		1px 0px 0px #585858,
+		2px 0px 0px #a0a0a0;
+	-moz-box-shadow:
+		1px 0px 0px #585858,
+		2px 0px 0px #a0a0a0;
+	box-shadow:
+		1px 0px 0px #585858,
+		2px 0px 0px #a0a0a0;
+}
+.red span,
+.red.blue-hover span,
+.red.green-hover span,
+.red.black-hover span,
+.red.purple-hover span {
+	-webkit-box-shadow:
+		1px 0px 0px #821913,
+		2px 0px 0px #d5605d;
+	-moz-box-shadow:
+		1px 0px 0px #821913,
+		2px 0px 0px #d5605d;
+	box-shadow:
+		1px 0px 0px #821913,
+		2px 0px 0px #d5605d;
+}
+.purple span,
+.purple.blue-hover span,
+.purple.green-hover span,
+.purple.black-hover span,
+.purple.red-hover span {
+	-webkit-box-shadow:
+		1px 0px 0px #b959cd,
+		2px 0px 0px #e6a9f3;
+	-moz-box-shadow:
+		1px 0px 0px #b959cd,
+		2px 0px 0px #e6a9f3;
+	box-shadow:
+		1px 0px 0px #b959cd,
+		2px 0px 0px #e6a9f3;
+}
+
+.grey.blue-hover:hover span,
+.green.blue-hover:hover span,
+.black.blue-hover:hover span,
+.red.blue-hover:hover span,
+.purple.blue-hover:hover span {
+	-webkit-box-shadow:
+		1px 0px 0px #2f87c3,
+		2px 0px 0px rgba(255,255,255,.35);
+	-moz-box-shadow:
+		1px 0px 0px #2f87c3,
+		2px 0px 0px rgba(255,255,255,.35);
+	box-shadow:
+		1px 0px 0px #2f87c3,
+		2px 0px 0px rgba(255,255,255,.35);
+}
+.grey.green-hover:hover span,
+.blue.green-hover:hover span,
+.black.green-hover:hover span,
+.red.green-hover:hover span,
+.purple.green-hover:hover span {
+	-webkit-box-shadow:
+		1px 0px 0px #1b962f,
+		2px 0px 0px #2fcf63;
+	-moz-box-shadow:
+		1px 0px 0px #1b962f,
+		2px 0px 0px #2fcf63;
+	box-shadow:
+		1px 0px 0px #1b962f,
+		2px 0px 0px #2fcf63;
+}
+.grey.black-hover:hover span,
+.blue.black-hover:hover span,
+.green.black-hover:hover span,
+.red.black-hover:hover span,
+.purple.black-hover:hover span {
+	-webkit-box-shadow:
+		1px 0px 0px #585858,
+		2px 0px 0px #a0a0a0;
+	-moz-box-shadow:
+		1px 0px 0px #585858,
+		2px 0px 0px #a0a0a0;
+	box-shadow:
+		1px 0px 0px #585858,
+		2px 0px 0px #a0a0a0;	
+}
+.grey.red-hover:hover span,
+.blue.red-hover:hover span,
+.green.red-hover:hover span,
+.black.red-hover:hover span,
+.purple.red-hover:hover span {
+	-webkit-box-shadow:
+		1px 0px 0px #821913,
+		2px 0px 0px #d5605d;
+	-moz-box-shadow:
+		1px 0px 0px #821913,
+		2px 0px 0px #d5605d;
+	box-shadow:
+		1px 0px 0px #821913,
+		2px 0px 0px #d5605d;
+} 
+.grey.purple-hover:hover span,
+.blue.purple-hover:hover span,
+.green.purple-hover:hover span,
+.black.purple-hover:hover span,
+.red.purple-hover:hover span {
+	-webkit-box-shadow:
+		1px 0px 0px #b959cd,
+		2px 0px 0px #e6a9f3;
+	-moz-box-shadow:
+		1px 0px 0px #b959cd,
+		2px 0px 0px #e6a9f3;
+	box-shadow:
+		1px 0px 0px #b959cd,
+		2px 0px 0px #e6a9f3;
+}
+
+
+/* ----------------------------------------------------------------------------------------------------
+Dividers for images floated to the right, add the class image-right to the anchor tag you wish to have images to the right of the button.
+----------------------------------------------------------------------------------------------------*/
+
+.image-right span { 
+	float:right;
+}
+.image-right.grey.blue-hover span,
+.image-right.grey.green-hover span,
+.image-right.grey.black-hover span,
+.image-right.grey.red-hover span,
+.image-right.grey.purple-hover span,
+.image-right.grey.no-hover span {
+	-webkit-box-shadow:
+		-1px 0px 0px #b8b9b9,
+		-2px 0px 0px #fff;
+	-moz-box-shadow:
+		-1px 0px 0px #b8b9b9,
+		-2px 0px 0px #fff;
+	box-shadow:
+		-1px 0px 0px #b8b9b9,
+		-2px 0px 0px #fff;
+}
+.image-right.blue span,
+.image-right.blue:hover span,
+.image-right.grey.blue-hover:hover span,
+.image-right.green.blue-hover:hover span,
+.image-right.black.blue-hover:hover span,
+.image-right.red.blue-hover:hover span,
+.image-right.purple.blue-hover:hover span,
+.image-right.blue.no-hover span {
+	-webkit-box-shadow:
+		-1px 0px 0px #2f87c3,
+		-2px 0px 0px rgba(255,255,255,.35);
+	-moz-box-shadow:
+		-1px 0px 0px #2f87c3,
+		-2px 0px 0px rgba(255,255,255,.35);
+	box-shadow:
+		-1px 0px 0px #2f87c3,
+		-2px 0px 0px rgba(255,255,255,.35); 
+}
+.image-right.green span,
+.image-right.green:hover span,
+.image-right.grey.green-hover:hover span,
+.image-right.black.green-hover:hover span,
+.image-right.red.green-hover:hover span,
+.image-right.purple.green-hover:hover span,
+.image-right.green.no-hover span {
+	-webkit-box-shadow:
+		-1px 0px 0px #1b962f,
+		-2px 0px 0px #2fcf63;
+	-moz-box-shadow:
+		-1px 0px 0px #1b962f,
+		-2px 0px 0px #2fcf63;
+	box-shadow:
+		-1px 0px 0px #1b962f,
+		-2px 0px 0px #2fcf63;
+}
+
+.image-right.black span,
+.image-right.black:hover span,
+.image-right.grey.black-hover:hover span,
+.image-right.green.black-hover:hover span,
+.image-right.red.black-hover:hover span,
+.image-right.purple.black-hover:hover span,
+.image-right.black.no-hover span {
+	-webkit-box-shadow:
+		-1px 0px 0px #585858,
+		-2px 0px 0px #a0a0a0;
+	-moz-box-shadow:
+		-1px 0px 0px #585858,
+		-2px 0px 0px #a0a0a0;
+	box-shadow:
+		-1px 0px 0px #585858,
+		-2px 0px 0px #a0a0a0;
+}
+.image-right.red span,
+.image-right.red:hover span,
+.image-right.grey.red-hover:hover span,
+.image-right.blue.red-hover:hover span,
+.image-right.green.red-hover:hover span,
+.image-right.black.red-hover:hover span,
+.image-right.purple.red-hover:hover span,
+.image-right.red.no-hover span {
+	-webkit-box-shadow:
+		-1px 0px 0px #821913,
+		-2px 0px 0px #d5605d;
+	-moz-box-shadow:
+		-1px 0px 0px #821913,
+		-2px 0px 0px #d5605d;
+	box-shadow:
+		-1px 0px 0px #821913,
+		-2px 0px 0px #d5605d;
+}
+.image-right.purple span,
+.image-right.purple:hover span,
+.image-right.grey.purple-hover:hover span,
+.image-right.blue.purple-hover:hover span,
+.image-right.green.purple-hover:hover span,
+.image-righ.red.purple-hover:hover span,
+.image-right.purple-hover:hover span,
+.image-right.purple.no-hover span {
+	-webkit-box-shadow:
+		-1px 0px 0px #b959cd,
+		-2px 0px 0px #e6a9f3;
+	-moz-box-shadow:
+		-1px 0px 0px #b959cd,
+		-2px 0px 0px #e6a9f3;
+	box-shadow:
+		-1px 0px 0px #b959cd,
+		-2px 0px 0px #e6a9f3;
+}
+
+/* ----------------------------------------------------------------------------------------------------
+Image classes - Add the according class to the span tag for your desired image, thats all!
+----------------------------------------------------------------------------------------------------*/
+
+.grey.blue-hover span.mail,
+.grey.green-hover span.mail,
+.grey.black-hover span.mail,
+.grey.red-hover span.mail,
+.grey.purple-hover span.mail,
+.grey.no-hover span.mail {
+	background-position:0 0;
+} 
+.grey.blue-hover span.download,
+.grey.green-hover span.download,
+.grey.black-hover span.download,
+.grey.red-hover span.download,
+.grey.purple-hover span.download,
+.grey.no-hover span.download {
+	background-position:-31px 0;
+} 
+.grey.blue-hover span.cart,
+.grey.green-hover span.cart,
+.grey.black-hover span.cart,
+.grey.red-hover span.cart,
+.grey.no-hover span.cart {
+	background-position:-62px 0;
+} 
+.grey.blue-hover span.plus,
+.grey.green-hover span.plus,
+.grey.black-hover span.plus,
+.grey.red-hover span.plus,
+.grey.purple-hover span.plus,
+.grey.no-hover span.plus {
+	background-position:-93px 0;
+} 
+.grey.blue-hover span.prev,
+.grey.green-hover span.prev,
+.grey.black-hover span.prev,
+.grey.red-hover span.prev,
+.grey.purple-hover span.prev,
+.grey.no-hover span.prev {
+	background-position:-124px 0;
+} 
+
+.grey.blue-hover span.next,
+.grey.green-hover span.next,
+.grey.black-hover span.next,
+.grey.red-hover span.next,
+.grey.purple-hover span.next,
+.grey.no-hover span.next {
+	background-position:-155px 0;
+} 
+.grey.blue-hover span.cross,
+.grey.green-hover span.cross,
+.grey.black-hover span.cross,
+.grey.red-hover span.cross,
+.grey.purple-hover span.cross,
+.grey.no-hover span.cross {
+	background-position:-186px 0;
+}
+
+.grey.blue-hover span.info,
+.grey.green-hover span.info,
+.grey.black-hover span.info,
+.grey.red-hover span.info,
+.grey.purple-hover span.info,
+.grey.no-hover span.info {
+	background-position:-217px 0;
+}
+
+.grey.blue-hover span.tick,
+.grey.green-hover span.tick,
+.grey.black-hover span.tick,
+.grey.red-hover span.tick,
+.grey.purple-hover span.tick,
+.grey.no-hover span.tick {
+	background-position:-248px 0;
+}
+
+.grey.blue-hover span.permalink,
+.grey.green-hover span.permalink,
+.grey.black-hover span.permalink,
+.grey.red-hover span.permalink,
+.grey.purple-hover span.permalink,
+.grey.no-hover span.permalink {
+	background-position:-279px 0;
+}
+
+
+
+
+
+
+/** Hover Images **/
+.image-right.grey.blue-hover:hover span.mail,
+.grey.blue-hover:hover span.mail,
+.grey.green-hover:hover span.mail,
+.grey.black-hover:hover span.mail,
+.grey.red-hover:hover span.mail,
+.grey.purple-hover:hover span.mail,
+
+.blue.green-hover span.mail,
+.blue.black-hover span.mail,
+.blue.red-hover span.mail,
+.blue.purple-hover span.mail,
+.blue.no-hover span.mail,
+
+.green.blue-hover span.mail,
+.green.black-hover span.mail,
+.green.red-hover span.mail,
+.green.purple-hover span.mail,
+.green.no-hover span.mail,
+
+.black.blue-hover span.mail,
+.black.green-hover span.mail,
+.black.red-hover span.mail,
+.black.purple-hover span.mail,
+.black.no-hover span.mail,
+
+.red.blue-hover span.mail,
+.red.green-hover span.mail,
+.red.black-hover span.mail,
+.red.purple-hover span.mail,
+.red.no-hover span.mail,
+
+.purple.blue-hover span.mail,
+.purple.green-hover span.mail,
+.purple.black-hover span.mail,
+.purple.red-hover span.mail,
+.purple.no-hover span.mail  { background-position:0 -31px; }
+
+.image-right.grey.blue-hover:hover span.download,
+.grey.blue-hover:hover span.download,
+.grey.green-hover:hover span.download,
+.grey.black-hover:hover span.download,
+.grey.red-hover:hover span.download,
+.grey.purple-hover:hover span.download,
+
+.blue.green-hover span.download,
+.blue.black-hover span.download,
+.blue.red-hover span.download,
+.blue.purple-hover span.download,
+.blue.no-hover span.download,
+
+.green.blue-hover span.download,
+.green.black-hover span.download,
+.green.red-hover span.download,
+.green.purple-hover span.download,
+.green.no-hover span.download,
+
+.black.blue-hover span.download,
+.black.green-hover span.download,
+.black.red-hover span.download,
+.black.purple-hover span.download,
+.black.no-hover span.download,
+
+.red.blue-hover span.download,
+.red.green-hover span.download,
+.red.black-hover span.download,
+.red.purple-hover span.download,
+.red.no-hover span.download,
+
+.purple.blue-hover span.download,
+.purple.green-hover span.download,
+.purple.black-hover span.download,
+.purple.red-hover span.download,
+.purple.no-hover span.download   { background-position:-31px -31px; }
+
+.image-right.grey.blue-hover:hover span.cart,
+.grey.blue-hover:hover span.cart,
+.grey.green-hover:hover span.cart,
+.grey.black-hover:hover span.cart,
+.grey.red-hover:hover span.cart,
+.grey.purple-hover:hover span.cart,
+
+.blue.green-hover span.cart,
+.blue.black-hover span.cart,
+.blue.red-hover span.cart,
+.blue.purple-hover span.cart,
+.blue.no-hover span.cart,
+
+.green.blue-hover span.cart,
+.green.black-hover span.cart,
+.green.red-hover span.cart,
+.green.purple-hover span.cart,
+.green.no-hover span.cart,
+
+.black.blue-hover span.cart,
+.black.green-hover span.cart,
+.black.red-hover span.cart,
+.black.purple-hover span.cart,
+.black.no-hover span.cart,
+
+.red.blue-hover span.cart,
+.red.green-hover span.cart,
+.red.black-hover span.cart,
+.red.purple-hover span.cart,
+.red.no-hover span.cart,
+
+.purple.blue-hover span.cart,
+.purple.green-hover span.cart,
+.purple.black-hover span.cart,
+.purple.red-hover span.cart,
+.purple.no-hover span.cart   { background-position:-62px -31px; }
+
+.image-right.grey.blue-hover:hover span.plus,
+.grey.blue-hover:hover span.plus,
+.grey.green-hover:hover span.plus,
+.grey.black-hover:hover span.plus,
+.grey.red-hover:hover span.plus,
+.grey.purple-hover:hover span.plus,
+
+.blue.green-hover span.plus,
+.blue.black-hover span.plus,
+.blue.red-hover span.plus,
+.blue.purple-hover span.plus,
+.blue.no-hover span.plus,
+
+.green.blue-hover span.plus,
+.green.black-hover span.plus,
+.green.red-hover span.plus,
+.green.purple-hover span.plus,
+.green.no-hover span.plus,
+
+.black.blue-hover span.plus,
+.black.green-hover span.plus,
+.black.red-hover span.plus,
+.black.purple-hover span.plus,
+.black.no-hover span.plus,
+
+.red.blue-hover span.plus,
+.red.green-hover span.plus,
+.red.black-hover span.plus,
+.red.purple-hover span.plus,
+.red.no-hover span.plus,
+
+.purple.blue-hover span.plus,
+.purple.green-hover span.plus,
+.purple.black-hover span.plus,
+.purple.red-hover span.plus,
+.purple.no-hover span.plus   { background-position:-93px -31px; }
+
+.image-right.grey.blue-hover:hover span.prev,
+.grey.blue-hover:hover span.prev,
+.grey.green-hover:hover span.prev,
+.grey.black-hover:hover span.prev,
+.grey.red-hover:hover span.prev,
+.grey.purple-hover:hover span.prev,
+
+.blue.green-hover span.prev,
+.blue.black-hover span.prev,
+.blue.red-hover span.prev,
+.blue.purple-hover span.prev,
+.blue.no-hover span.prev,
+
+.green.blue-hover span.prev,
+.green.black-hover span.prev,
+.green.red-hover span.prev,
+.green.purple-hover span.prev,
+.green.no-hover span.prev,
+
+.black.blue-hover span.prev,
+.black.green-hover span.prev,
+.black.red-hover span.prev,
+.black.purple-hover span.prev,
+.black.no-hover span.prev,
+
+.red.blue-hover span.prev,
+.red.green-hover span.prev,
+.red.black-hover span.prev,
+.red.purple-hover span.prev,
+.red.no-hover span.prev,
+
+.purple.blue-hover span.prev,
+.purple.green-hover span.prev,
+.purple.black-hover span.prev,
+.purple.red-hover span.prev,
+.purple.no-hover span.prev   { background-position:-124px -31px; }
+
+.image-right.grey.blue-hover:hover span.next,
+.image-right.grey.green-hover:hover span.next,
+.image-right.grey.black-hover:hover span.next,
+.image-right.grey.red-hover:hover span.next,
+.image-right.grey.purple-hover:hover span.next,
+
+.grey.blue-hover:hover span.next,
+.grey.green-hover:hover span.next,
+.grey.black-hover:hover span.next,
+.grey.red-hover:hover span.next,
+.grey.purple-hover:hover span.next,
+
+.blue.green-hover span.next,
+.blue.black-hover span.next,
+.blue.red-hover span.next,
+.blue.purple-hover span.next,
+.blue.no-hover span.next,
+
+.green.blue-hover span.next,
+.green.black-hover span.next,
+.green.red-hover span.next,
+.green.purple-hover span.next,
+.green.no-hover span.next,
+
+.black.blue-hover span.next,
+.black.green-hover span.next,
+.black.red-hover span.next,
+.black.purple-hover span.next,
+.black.no-hover span.next,
+
+.red.blue-hover span.next,
+.red.green-hover span.next,
+.red.black-hover span.next,
+.red.purple-hover span.next,
+.red.no-hover span.next,
+
+.purple.blue-hover span.next,
+.purple.green-hover span.next,
+.purple.black-hover span.next,
+.purple.red-hover span.next,
+.purple.no-hover span.next   { background-position:-155px -31px; }
+
+.image-right.grey.blue-hover:hover span.cross,
+.grey.blue-hover:hover span.cross,
+.grey.green-hover:hover span.cross,
+.grey.black-hover:hover span.cross,
+.grey.red-hover:hover span.cross,
+.grey.purple-hover:hover span.cross,
+
+.blue.green-hover span.cross,
+.blue.black-hover span.cross,
+.blue.red-hover span.cross,
+.blue.purple-hover span.cross,
+.blue.no-hover span.cross,
+
+.green.blue-hover span.cross,
+.green.black-hover span.cross,
+.green.red-hover span.cross,
+.green.purple-hover span.cross,
+.green.no-hover span.cross,
+
+.black.blue-hover span.cross,
+.black.green-hover span.cross,
+.black.red-hover span.cross,
+.black.purple-hover span.cross,
+.black.no-hover span.cross,
+
+.red.blue-hover span.cross,
+.red.green-hover span.cross,
+.red.black-hover span.cross,
+.red.purple-hover span.cross,
+.red.no-hover span.cross,
+
+.purple.blue-hover span.cross,
+.purple.green-hover span.cross,
+.purple.black-hover span.cross,
+.purple.red-hover span.cross,
+.purple.no-hover span.cross   { background-position:-186px -31px; }
+
+.image-right.grey.blue-hover:hover span.info,
+.grey.blue-hover:hover span.info,
+.grey.green-hover:hover span.info,
+.grey.black-hover:hover span.info,
+.grey.red-hover:hover span.info,
+.grey.purple-hover:hover span.info,
+
+.blue.green-hover span.info,
+.blue.black-hover span.info,
+.blue.red-hover span.info,
+.blue.purple-hover span.info,
+.blue.no-hover span.info,
+
+.green.blue-hover span.info,
+.green.black-hover span.info,
+.green.red-hover span.info,
+.green.purple-hover span.info,
+.green.no-hover span.info,
+
+.black.blue-hover span.info,
+.black.green-hover span.info,
+.black.red-hover span.info,
+.black.purple-hover span.info,
+.black.no-hover span.info,
+
+.red.blue-hover span.info,
+.red.green-hover span.info,
+.red.black-hover span.info,
+.red.purple-hover span.info,
+.red.no-hover span.info,
+
+.purple.blue-hover span.info,
+.purple.green-hover span.info,
+.purple.black-hover span.info,
+.purple.red-hover span.info,
+.purple.no-hover span.info   { background-position:-217px -31px; }
+
+.image-right.grey.blue-hover:hover span.tick,
+.grey.blue-hover:hover span.tick,
+.grey.green-hover:hover span.tick,
+.grey.black-hover:hover span.tick,
+.grey.red-hover:hover span.tick,
+.grey.purple-hover:hover span.tick,
+
+.blue.green-hover span.tick,
+.blue.black-hover span.tick,
+.blue.red-hover span.tick,
+.blue.purple-hover span.tick,
+.blue.no-hover span.tick,
+
+.green.blue-hover span.tick,
+.green.black-hover span.tick,
+.green.red-hover span.tick,
+.green.purple-hover span.tick,
+.green.no-hover span.tick,
+
+.black.blue-hover span.tick,
+.black.green-hover span.tick,
+.black.red-hover span.tick,
+.black.purple-hover span.tick,
+.black.no-hover span.tick,
+
+.red.blue-hover span.tick,
+.red.green-hover span.tick,
+.red.black-hover span.tick,
+.red.purple-hover span.tick,
+.red.no-hover span.tick,
+
+.purple.blue-hover span.tick,
+.purple.green-hover span.tick,
+.purple.black-hover span.tick,
+.purple.red-hover span.tick,
+.purple.no-hover span.tick   { background-position:-248px -31px; }
+
+.image-right.grey.blue-hover:hover span.permalink,
+.grey.blue-hover:hover span.permalink,
+.grey.green-hover:hover span.permalink,
+.grey.black-hover:hover span.permalink,
+.grey.red-hover:hover span.permalink,
+.grey.purple-hover:hover span.permalink,
+
+.blue.green-hover span.permalink,
+.blue.black-hover span.permalink,
+.blue.red-hover span.permalink,
+.blue.purple-hover span.permalink,
+.blue.no-hover span.permalink,
+
+.green.blue-hover span.permalink,
+.green.black-hover span.permalink,
+.green.red-hover span.permalink,
+.green.purple-hover span.permalink,
+.green.no-hover span.permalink,
+
+.black.blue-hover span.permalink,
+.black.green-hover span.permalink,
+.black.red-hover span.permalink,
+.black.purple-hover span.permalink,
+.black.no-hover span.permalink,
+
+.red.blue-hover span.permalink,
+.red.green-hover span.permalink,
+.red.black-hover span.permalink,
+.red.purple-hover span.permalink,
+.red.no-hover span.permalink,
+
+.purple.blue-hover span.permalink,
+.purple.green-hover span.permalink,
+.purple.black-hover span.permalink,
+.purple.red-hover span.permalink,
+.purple.no-hover span.permalink   { background-position:-279px -31px; }
+
+
+
+/** Image Right Styles **/
+.grey.blue-hover.image-right span.next,
+.grey.green-hover.image-right span.next,
+.grey.black-hover.image-right span.next,
+.grey.red-hover.image-right span.next,
+.grey.purple-hover.image-right span.next {
+	background-position:-155px 0;
+} 
+
+
+
+
+.small-button.grey span,
+.small-button.grey.blue-hover span,
+.small-button.grey.green-hover span,
+.small-button.grey.black-hover span,
+.small-button.grey.red-hover span,
+.small-button.grey.purple-hover span {
+	-webkit-box-shadow:
+		1px 0px 0px rgba(255,255,255,.01),
+		2px 0px 0px rgba(255,255,255,.01);
+	-moz-box-shadow:
+		1px 0px 0px #b7b9b9,
+		2px 0px 0px rgba(255,255,255,.01);
+	box-shadow:
+		1px 0px 0px rgba(255,255,255,.01),
+		2px 0px 0px rgba(255,255,255,.01);
+}
+.small-button.blue span,
+.small-button.blue.green-hover span,
+.small-button.blue.black-hover span,
+.small-button.blue.red-hover span,
+.small-button.blue.purple-hover span {
+	-webkit-box-shadow:
+		1px 0px 0px rgba(255,255,255,.01),
+		2px 0px 0px rgba(255,255,255,.01);
+	-moz-box-shadow:
+		1px 0px 0px rgba(255,255,255,.01),
+		2px 0px 0px rgba(255,255,255,.01);
+	box-shadow:
+		1px 0px 0px rgba(255,255,255,.01),
+		2px 0px 0px rgba(255,255,255,.01);
+}
+.small-button.green span,
+.small-button.green.blue-hover span,
+.small-button.green.black-hover span,
+.small-button.green.red-hover span,
+.small-button.green.purple-hover span, 
+.small-button.green.blue-hover:hover span {
+	-webkit-box-shadow:
+		1px 0px 0px rgba(255,255,255,.01),
+		2px 0px 0px rgba(255,255,255,.01);
+	-moz-box-shadow:
+		1px 0px 0px rgba(255,255,255,.01),
+		2px 0px 0px rgba(255,255,255,.01);
+	box-shadow:
+		1px 0px 0px rgba(255,255,255,.01),
+		2px 0px 0px rgba(255,255,255,.01);
+}
+.small-button.black span,
+.small-button.black.blue-hover span,
+.small-button.black.green-hover span,
+.small-button.black.red-hover span,
+.small-button.black.purple-hover span {
+	-webkit-box-shadow:
+		1px 0px 0px rgba(255,255,255,.01),
+		2px 0px 0px rgba(255,255,255,.01);
+	-moz-box-shadow:
+		1px 0px 0px rgba(255,255,255,.01),
+		2px 0px 0px rgba(255,255,255,.01);
+	box-shadow:
+		1px 0px 0px rgba(255,255,255,.01),
+		2px 0px 0px rgba(255,255,255,.01);
+}
+.small-button.red span,
+.small-button.red.blue-hover span,
+.small-button.red.green-hover span,
+.small-button.red.black-hover span,
+.small-button.red.purple-hover span {
+	-webkit-box-shadow:
+		1px 0px 0px rgba(255,255,255,.01),
+		2px 0px 0px rgba(255,255,255,.01);
+	-moz-box-shadow:
+		1px 0px 0px rgba(255,255,255,.01),
+		2px 0px 0px rgba(255,255,255,.01);
+	box-shadow:
+		1px 0px 0px rgba(255,255,255,.01),
+		2px 0px 0px rgba(255,255,255,.01);
+}
+.small-button.purple span,
+.small-button.purple.blue-hover span,
+.small-button.purple.green-hover span,
+.small-button.purple.black-hover span,
+.small-button.purple.red-hover span {
+	-webkit-box-shadow:
+		1px 0px 0px rgba(255,255,255,.01),
+		2px 0px 0px rgba(255,255,255,.01);
+	-moz-box-shadow:
+		1px 0px 0px rgba(255,255,255,.01),
+		2px 0px 0px rgba(255,255,255,.01);
+	box-shadow:
+		1px 0px 0px rgba(255,255,255,.01),
+		2px 0px 0px rgba(255,255,255,.01);
+}
+
+.small-button.grey.blue-hover:hover span,
+.small-button.green.blue-hover:hover span,
+.small-button.black.blue-hover:hover span,
+.small-button.red.blue-hover:hover span,
+.small-button.purple.blue-hover:hover span {
+	-webkit-box-shadow:
+		1px 0px 0px rgba(255,255,255,.01),
+		2px 0px 0px rgba(255,255,255,.01);
+	-moz-box-shadow:
+		1px 0px 0px rgba(255,255,255,.01),
+		2px 0px 0px rgba(255,255,255,.01);
+	box-shadow:
+		1px 0px 0px rgba(255,255,255,.01),
+		2px 0px 0px rgba(255,255,255,.01);
+}
+.small-button.grey.green-hover:hover span,
+.small-button.blue.green-hover:hover span,
+.small-button.black.green-hover:hover span,
+.small-button.red.green-hover:hover span,
+.small-button.purple.green-hover:hover span {
+	-webkit-box-shadow:
+		1px 0px 0px rgba(255,255,255,.01),
+		2px 0px 0px rgba(255,255,255,.01);
+	-moz-box-shadow:
+		1px 0px 0px rgba(255,255,255,.01),
+		2px 0px 0px rgba(255,255,255,.01);
+	box-shadow:
+		1px 0px 0px rgba(255,255,255,.01),
+		2px 0px 0px rgba(255,255,255,.01);
+}
+.small-button.grey.black-hover:hover span,
+.small-button.blue.black-hover:hover span,
+.small-button.green.black-hover:hover span,
+.small-button.red.black-hover:hover span,
+.small-button.purple.black-hover:hover span {
+	-webkit-box-shadow:
+		1px 0px 0px rgba(255,255,255,.01),
+		2px 0px 0px rgba(255,255,255,.01);
+	-moz-box-shadow:
+		1px 0px 0px rgba(255,255,255,.01),
+		2px 0px 0px rgba(255,255,255,.01);
+	box-shadow:
+		1px 0px 0px rgba(255,255,255,.01),
+		2px 0px 0px rgba(255,255,255,.01);	
+}
+.small-button.grey.red-hover:hover span,
+.small-button.blue.red-hover:hover span,
+.small-button.green.red-hover:hover span,
+.small-button.black.red-hover:hover span,
+.small-button.purple.red-hover:hover span {
+	-webkit-box-shadow:
+		1px 0px 0px rgba(255,255,255,.01),
+		2px 0px 0px rgba(255,255,255,.01);
+	-moz-box-shadow:
+		1px 0px 0px rgba(255,255,255,.01),
+		2px 0px 0px rgba(255,255,255,.01);
+	box-shadow:
+		1px 0px 0px rgba(255,255,255,.01),
+		2px 0px 0px rgba(255,255,255,.01);
+} 
+.small-button.grey.purple-hover:hover span,
+.small-button.blue.purple-hover:hover span,
+.small-button.green.purple-hover:hover span,
+.small-button.black.purple-hover:hover span,
+.small-button.red.purple-hover:hover span {
+	-webkit-box-shadow:
+		1px 0px 0px rgba(255,255,255,.01),
+		2px 0px 0px rgba(255,255,255,.01);
+	-moz-box-shadow:
+		1px 0px 0px rgba(255,255,255,.01),
+		2px 0px 0px rgba(255,255,255,.01);
+	box-shadow:
+		1px 0px 0px rgba(255,255,255,.01),
+		2px 0px 0px rgba(255,255,255,.01);
+}
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Button Widths - These are only specific widths according to the Photoshop document, change them to your own according.
+(seperate classes used to create widths - made to be generic as possible)
+----------------------------------------------------------------------------------------------------*/
+
+.button-1  { width:119px;  }
+.button-2  { width:122px;  }
+.button-3  { width:121px;  }
+.button-4  { width:132px;  }
+.button-5  { width:90px;   }
+.button-6  { width:91px;   }
+.button-7  { width:91px;   }
+.button-8  { width:90px;   }
+.button-9  { width:113px;  }
+.button-10 { width:121px;  }
+.button-11 { width:119px;  }
+.button-12 { width:132px;  }
+.button-13 { width:104px;  }
+.button-14 { width:104px;  }
+.button-15 { width:117px;  }
+.button-16 { width:122px;  }
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Elements styles
+----------------------------------------------------------------------------------------------------*/
+
+#member-login {
+	float:left;
+	width: 310px;
+	height: 255px;
+
+	margin: 50px 195px 0px 195px;
+
+	position: relative;
+}
+#member-title {
+	width: 310px;
+	height: 38px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 5;
+
+	font-size:16px;
+	font-weight:bold;
+	line-height:38px;
+	text-align:center;
+	
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-topright: 4px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+#member-main {
+	width: 310px;
+	height: 214px;
+	position: absolute;
+	top: 39px;
+	left: 0;
+	z-index: 1;
+
+	background: -webkit-linear-gradient(top, #f4f5f7 0%,#e1e2e6 90%,#cfd1d4 100%);
+	background: -moz-linear-gradient(top, #f4f5f7 0%,#e1e2e6 90%,#cfd1d4 100%);
+	background: -o-linear-gradient(top, #f4f5f7 0%,#e1e2e6 90%,#cfd1d4 100%);
+	background: -ms-linear-gradient(top, #f4f5f7 0%,#e1e2e6 90%,#cfd1d4 100%);
+	background: linear-gradient(top, #f4f5f7 0%,#e1e2e6 90%,#cfd1d4 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f5f7', endColorstr='#cfd1d4',GradientType=0 );
+	border:1px solid #949494;
+
+	-webkit-box-shadow:
+		inset 0px 1px 0px #fff,
+		0px 1px 1px rgba(0,0,0,.15);
+	-moz-box-shadow:
+		inset 0px 1px 0px #fff,
+		0px 1px 1px rgba(0,0,0,.15);
+	box-shadow:
+		inset 0px 1px 0px #fff,
+		0px 1px 1px rgba(0,0,0,.15);
+
+	-webkit-border-bottom-right-radius: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	-moz-border-radius-bottomright: 4px;
+	-moz-border-radius-bottomleft: 4px;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+#member-main h5 {
+	font-size:12px;
+	font-weight:bold;
+	color:#555454;
+	text-align:center;
+	line-height:16px;
+	text-shadow:0px 1px 0px #fff;
+
+	width:245px;
+	float: left;
+	
+	margin: 16px 34px 19px 32px;
+}
+#member-main h5 a {
+	color:inherit;
+}
+
+#member-main input {
+	width: 229px;
+	height: 35px;
+	float: left;
+	margin: 0px 23px 7px 23px;
+	position: relative;
+
+	background-repeat:no-repeat;
+	border:1px solid #b1b1b1;
+
+	font-size:13px;
+	font-weight:500;
+	color: #8f8f8f;
+
+	padding-left:35px;
+}
+.user-input { 
+	background: url(../images/user.png) #fff;
+}
+.pass-input {
+	background: url(../images/pass.png) #fff;
+}
+
+.forgot-pass {
+	font-size:12px;
+	font-weight:bold;
+	color:#555454;
+	text-align:center;
+	line-height:16px;
+	text-shadow:0px 1px 0px #fff;
+
+	float:left;
+	margin: 13px 55px 0px 25px;
+}
+
+.submit {
+	float: left;
+	width: 80px;
+	height: 35px;
+
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:15px;
+	font-weight:bold;
+
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+.blue-color {
+	background: -webkit-linear-gradient(top, #4db9fe 0%,#339be3 90%,#2786c9 100%);
+	background: -moz-linear-gradient(top, #4db9fe 0%,#339be3 90%,#2786c9 100%);
+	background: -o-linear-gradient(top, #4db9fe 0%,#339be3 90%,#2786c9 100%);
+	background: -ms-linear-gradient(top, #4db9fe 0%,#339be3 90%,#2786c9 100%);
+	background: linear-gradient(top, #4db9fe 0%,#339be3 90%,#2786c9 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4db9fe', endColorstr='#2786c9',GradientType=0 );
+	border:1px solid #0f5ea9;
+
+	-webkit-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	-moz-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+
+	color: #fff;
+	text-shadow:0px -1px 0px rgba(0,0,0,.22);
+}
+.green-color {
+	background: -webkit-linear-gradient(top, #25c652 0%,#2aa640 90%,#298f35 100%);
+	background: -moz-linear-gradient(top, #25c652 0%,#2aa640 90%,#298f35 100%);
+	background: -o-linear-gradient(top, #25c652 0%,#2aa640 90%,#298f35 100%);
+	background: -ms-linear-gradient(top, #25c652 0%,#2aa640 90%,#298f35 100%);
+	background: linear-gradient(top, #25c652 0%,#2aa640 90%,#298f35 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#25c652', endColorstr='#298f35',GradientType=0 );
+	border:1px solid #0f681b;
+
+	-webkit-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	-moz-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+
+	color: #fff;
+	text-shadow:0px -1px 0px rgba(0,0,0,.22);
+}
+.black-color {
+	background: -webkit-linear-gradient(top, #777777 0%,#585858 90%,#454545 100%);
+	background: -moz-linear-gradient(top, #777777 0%,#585858 90%,#454545 100%);
+	background: -o-linear-gradient(top, #777777 0%,#585858 90%,#454545 100%);
+	background: -ms-linear-gradient(top, #777777 0%,#585858 90%,#454545 100%);
+	background: linear-gradient(top, #777777 0%,#585858 90%,#454545 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#777777', endColorstr='#454545',GradientType=0 );
+	border:1px solid #323232;
+
+	-webkit-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	-moz-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+
+	color: #fff;
+	text-shadow:0px -1px 0px rgba(0,0,0,.22);
+}
+.red-color {
+	background: -webkit-linear-gradient(top, #dc4646 0%,#a73636 88%,#8e2d2d 100%);
+	background: -moz-linear-gradient(top, #dc4646 0%,#a73636 88%,#8e2d2d 100%);
+	background: -o-linear-gradient(top, #dc4646 0%,#a73636 88%,#8e2d2d 100%);
+	background: -ms-linear-gradient(top, #dc4646 0%,#a73636 88%,#8e2d2d 100%);
+	background: linear-gradient(top, #dc4646 0%,#a73636 88%,#8e2d2d 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dc4646', endColorstr='#8e2d2d',GradientType=0 );
+	border: 1px solid #850000;
+
+	-webkit-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	-moz-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+
+	color: #fff;
+	text-shadow:0px -1px 0px rgba(0,0,0,.22);
+}
+.purple-color {
+	background: -webkit-linear-gradient(top, #e193f2 0%,#d072e4 90%,#ba5fce 100%);
+	background: -moz-linear-gradient(top, #e193f2 0%,#d072e4 90%,#ba5fce 100%);
+	background: -o-linear-gradient(top, #e193f2 0%,#d072e4 90%,#ba5fce 100%);
+	background: -ms-linear-gradient(top, #e193f2 0%,#d072e4 90%,#ba5fce 100%);
+	background: linear-gradient(top, #e193f2 0%,#d072e4 90%,#ba5fce 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e193f2', endColorstr='#ba5fce',GradientType=0 );
+	border: 1px solid #9c3cb1;
+
+	-webkit-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	-moz-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+
+	color: #fff;
+	text-shadow:0px -1px 0px rgba(0,0,0,.22);
+}
+
+#searches {
+	float:left;
+	width: 268px;
+	margin-left: 72px;
+	margin-top: 40px;
+}
+#searches-round {
+	float:left;
+	width:268px;
+	margin-left: 20px;
+	margin-top: 40px;
+}
+.search {
+	width: 233px;
+	height: 35px;
+	float:left;
+	padding-left:32px;
+	
+	margin-top: 20px;
+
+	background:url(../images/search.png) no-repeat #fff;
+	border:1px solid #b1b1b1;
+
+	-webkit-box-shadow: inset 0px 1px 5px rgba(0,0,0,.1);
+	-moz-box-shadow: inset 0px 1px 5px rgba(0,0,0,.1);
+	box-shadow: inset 0px 1px 5px rgba(0,0,0,.1);
+
+	font-size:13px;
+	color:#8f8f8f;
+}
+.search-round {
+	width: 233px;
+	height: 35px;
+	float:right;
+	padding-left:32px;
+	
+	margin-top: 20px;
+
+	background:url(../images/search.png) no-repeat #fff;
+	border:1px solid #b1b1b1;
+
+	-webkit-box-shadow: inset 0px 1px 5px rgba(0,0,0,.1);
+	-moz-box-shadow: inset 0px 1px 5px rgba(0,0,0,.1);
+	box-shadow: inset 0px 1px 5px rgba(0,0,0,.1);
+
+	font-size:13px;
+	color:#8f8f8f;
+
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius:4px;
+}
+
+.blue-search:focus {
+	border:1px solid #39a2ea;
+
+	-webkit-box-shadow: 
+		inset 0px 1px 5px rgba(0,0,0,.1),
+		0px 0px 3px rgba(76,184,253,.5);
+	-moz-box-shadow: 
+		inset 0px 1px 5px rgba(0,0,0,.1),
+		0px 0px 3px rgba(76,184,253,.5);
+	box-shadow: 
+		inset 0px 1px 5px rgba(0,0,0,.1),
+		0px 0px 3px rgba(76,184,253,.5);
+}
+.green-search:focus {
+	border:1px solid #27bd4d;
+
+	-webkit-box-shadow: 
+		inset 0px 1px 5px rgba(0,0,0,.1),
+		0px 0px 3px rgba(37,198,82,.5);
+	-moz-box-shadow: 
+		inset 0px 1px 5px rgba(0,0,0,.1),
+		0px 0px 3px rgba(37,198,82,.5);
+	box-shadow: 
+		inset 0px 1px 5px rgba(0,0,0,.1),
+		0px 0px 3px rgba(37,198,82,.5);
+}
+.black-search:focus {
+	border:1px solid #838383;
+
+	-webkit-box-shadow: 
+		inset 0px 1px 5px rgba(0,0,0,.1),
+		0px 0px 3px rgba(147,147,147,.5);
+	-moz-box-shadow: 
+		inset 0px 1px 5px rgba(0,0,0,.1),
+		0px 0px 3px rgba(147,147,147,.5);
+	box-shadow: 
+		inset 0px 1px 5px rgba(0,0,0,.1),
+		0px 0px 3px rgba(147,147,147,.5);
+}
+.red-search:focus {
+	border:1px solid #c5413d;
+
+	-webkit-box-shadow: 
+		inset 0px 1px 5px rgba(0,0,0,.1),
+		0px 0px 3px rgba(197,65,61,.5);
+	-moz-box-shadow: 
+		inset 0px 1px 5px rgba(0,0,0,.1),
+		0px 0px 3px rgba(197,65,61,.5);
+	box-shadow: 
+		inset 0px 1px 5px rgba(0,0,0,.1),
+		0px 0px 3px rgba(197,65,61,.5);
+}
+.purple-search:focus {
+	border:1px solid #d484ef;
+
+	-webkit-box-shadow: 
+		inset 0px 1px 5px rgba(0,0,0,.1),
+		0px 0px 3px rgba(212,132,239,.5);
+	-moz-box-shadow: 
+		inset 0px 1px 5px rgba(0,0,0,.1),
+		0px 0px 3px rgba(212,132,239,.5);
+	box-shadow: 
+		inset 0px 1px 5px rgba(0,0,0,.1),
+		0px 0px 3px rgba(212,132,239,.5);
+}
+
+
+#navigations {
+	float:left;
+	margin-top: 100px;
+	margin-bottom: 250px;
+	width:628px;
+}
+.navigation {
+	float:left;
+	margin-bottom:20px;
+}
+.navigation a {
+	font-size:14px;
+	font-weight:bold;
+	position:relative;
+
+	display:block;
+	padding:10px 20px 11px 22px;
+}
+.navigation li {
+	float:left;
+	position:relative;
+	
+}
+.navigation li:first-child a, .navigation li:first-child { border-radius:4px 0 0 4px;  }
+.navigation li:last-child a, .navigation li:last-child a  { border-radius:0 4px 4px 0;  }
+
+.navigation-grey a {
+	background: -webkit-linear-gradient(top, #f4f5f7 0%,#e1e2e6 90%,#cfd1d4 100%);
+	background: -moz-linear-gradient(top, #f4f5f7 0%,#e1e2e6 90%,#cfd1d4 100%);
+	background: -o-linear-gradient(top, #f4f5f7 0%,#e1e2e6 90%,#cfd1d4 100%);
+	background: -ms-linear-gradient(top, #f4f5f7 0%,#e1e2e6 90%,#cfd1d4 100%);
+	background: linear-gradient(top, #f4f5f7 0%,#e1e2e6 90%,#cfd1d4 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f5f7', endColorstr='#cfd1d4',GradientType=0 );
+
+	border-top:1px solid #949494;
+	border-bottom:1px solid #949494;
+	border-right:1px solid #949494;
+	border-left:1px solid rgba(255,255,255,.75);
+
+	color:#555454;
+	text-shadow:0px 1px 0px #fff;
+
+	-webkit-box-shadow:
+		inset 0px 1px 0px #fff,
+		0px 1px 1px rgba(0,0,0,.15);
+	-moz-box-shadow:
+		inset 0px 1px 0px #fff,
+		0px 1px 1px rgba(0,0,0,.15);
+	box-shadow:
+		inset 0px 1px 0px #fff,
+		0px 1px 1px rgba(0,0,0,.15);
+}
+.navigation-grey li:first-child a { border-left:1px solid #949494; }
+
+
+.navigation-blue-hover a:hover {
+	background: -webkit-linear-gradient(top, #4db9fe 0%,#339be3 90%,#2786c9 100%);
+	background: -moz-linear-gradient(top, #4db9fe 0%,#339be3 90%,#2786c9 100%);
+	background: -o-linear-gradient(top, #4db9fe 0%,#339be3 90%,#2786c9 100%);
+	background: -ms-linear-gradient(top, #4db9fe 0%,#339be3 90%,#2786c9 100%);
+	background: linear-gradient(top, #4db9fe 0%,#339be3 90%,#2786c9 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4db9fe', endColorstr='#2786c9',GradientType=0 );
+
+	border-top:1px solid #0f5ea9;
+	border-bottom:1px solid #0f5ea9;
+	border-right:1px solid #0f5ea9;
+	border-left:1px solid #0f5ea9;
+
+	color: #fff;
+	text-shadow:0px -1px 0px rgba(0,0,0,.22);
+
+	-webkit-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	-moz-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+}
+.navigation-blue-hover li:first-child a:hover {
+	border-left:1px solid #0f5ea9;
+}
+
+
+.navigation-green-hover a:hover {
+	background: -webkit-linear-gradient(top, #25c652 0%,#2aa640 90%,#298f35 100%);
+	background: -moz-linear-gradient(top, #25c652 0%,#2aa640 90%,#298f35 100%);
+	background: -o-linear-gradient(top, #25c652 0%,#2aa640 90%,#298f35 100%);
+	background: -ms-linear-gradient(top, #25c652 0%,#2aa640 90%,#298f35 100%);
+	background: linear-gradient(top, #25c652 0%,#2aa640 90%,#298f35 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#25c652', endColorstr='#298f35',GradientType=0 );
+	
+	border-top:1px solid #0f681b;
+	border-bottom:1px solid #0f681b;
+	border-right:1px solid #0f681b;
+	border-left:1px solid #0f681b;
+
+	color: #fff;
+	text-shadow:0px -1px 0px rgba(0,0,0,.22);
+
+	-webkit-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	-moz-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+}
+.navigation-green-hover li:first-child a:hover {
+	border-left:1px solid #0f681b;
+}
+
+.navigation-black-hover a:hover {
+	background: -webkit-linear-gradient(top, #777777 0%,#585858 90%,#454545 100%);
+	background: -moz-linear-gradient(top, #777777 0%,#585858 90%,#454545 100%);
+	background: -o-linear-gradient(top, #777777 0%,#585858 90%,#454545 100%);
+	background: -ms-linear-gradient(top, #777777 0%,#585858 90%,#454545 100%);
+	background: linear-gradient(top, #777777 0%,#585858 90%,#454545 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#777777', endColorstr='#454545',GradientType=0 );
+	
+	border-top:1px solid #323232;
+	border-bottom:1px solid #323232;
+	border-right:1px solid #323232;
+	border-left:1px solid #323232;
+
+	color: #fff;
+	text-shadow:0px -1px 0px rgba(0,0,0,.22);
+
+	-webkit-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	-moz-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+}
+.navigation-black-hover li:first-child a:hover {
+	border-left:1px solid #323232;
+}
+
+
+.navigation-red-hover a:hover {
+	background: -webkit-linear-gradient(top, #dc4646 0%,#a73636 88%,#8e2d2d 100%);
+	background: -moz-linear-gradient(top, #dc4646 0%,#a73636 88%,#8e2d2d 100%);
+	background: -o-linear-gradient(top, #dc4646 0%,#a73636 88%,#8e2d2d 100%);
+	background: -ms-linear-gradient(top, #dc4646 0%,#a73636 88%,#8e2d2d 100%);
+	background: linear-gradient(top, #dc4646 0%,#a73636 88%,#8e2d2d 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dc4646', endColorstr='#8e2d2d',GradientType=0 );
+	
+	border-top:1px solid #850000;
+	border-bottom:1px solid #850000;
+	border-right:1px solid #850000;
+	border-left:1px solid #850000;
+
+	color: #fff;
+	text-shadow:0px -1px 0px rgba(0,0,0,.22);
+
+	-webkit-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	-moz-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+}
+.navigation-red-hover li:first-child a:hover {
+	border-left:1px solid #850000;
+}
+
+
+.navigation-purple-hover a:hover {
+	background: -webkit-linear-gradient(top, #e193f2 0%,#d072e4 90%,#ba5fce 100%);
+	background: -moz-linear-gradient(top, #e193f2 0%,#d072e4 90%,#ba5fce 100%);
+	background: -o-linear-gradient(top, #e193f2 0%,#d072e4 90%,#ba5fce 100%);
+	background: -ms-linear-gradient(top, #e193f2 0%,#d072e4 90%,#ba5fce 100%);
+	background: linear-gradient(top, #e193f2 0%,#d072e4 90%,#ba5fce 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e193f2', endColorstr='#ba5fce',GradientType=0 );
+	
+	border-top:1px solid #9c3cb1;
+	border-bottom:1px solid #9c3cb1;
+	border-right:1px solid #9c3cb1;
+	border-left:1px solid #9c3cb1;
+
+	color: #fff;
+	text-shadow:0px -1px 0px rgba(0,0,0,.22);
+
+	-webkit-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	-moz-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+}
+.navigation-purple-hover li:first-child a:hover {
+	border-left:1px solid #9c3cb1;
+}
+
+
+
+
+
+.navigation-blue a {
+	background: -webkit-linear-gradient(top, #4db9fe 0%,#339be3 90%,#2786c9 100%);
+	background: -moz-linear-gradient(top, #4db9fe 0%,#339be3 90%,#2786c9 100%);
+	background: -o-linear-gradient(top, #4db9fe 0%,#339be3 90%,#2786c9 100%);
+	background: -ms-linear-gradient(top, #4db9fe 0%,#339be3 90%,#2786c9 100%);
+	background: linear-gradient(top, #4db9fe 0%,#339be3 90%,#2786c9 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4db9fe', endColorstr='#2786c9',GradientType=0 );
+
+	border-top:1px solid #0f5ea9;
+	border-bottom:1px solid #0f5ea9;
+	border-right:1px solid #0f5ea9;
+	border-left:1px solid #83cffc;
+
+	color: #fff;
+	text-shadow:0px -1px 0px rgba(0,0,0,.22);
+
+	-webkit-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	-moz-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+}
+.navigation-blue li:first-child a {
+	border-left:1px solid #0f5ea9;
+}
+
+
+.navigation-green a {
+	background: -webkit-linear-gradient(top, #25c652 0%,#2aa640 90%,#298f35 100%);
+	background: -moz-linear-gradient(top, #25c652 0%,#2aa640 90%,#298f35 100%);
+	background: -o-linear-gradient(top, #25c652 0%,#2aa640 90%,#298f35 100%);
+	background: -ms-linear-gradient(top, #25c652 0%,#2aa640 90%,#298f35 100%);
+	background: linear-gradient(top, #25c652 0%,#2aa640 90%,#298f35 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#25c652', endColorstr='#298f35',GradientType=0 );
+	
+	border-top:1px solid #0f681b;
+	border-bottom:1px solid #0f681b;
+	border-right:1px solid #0f681b;
+	border-left:1px solid #2ed466;
+
+	color: #fff;
+	text-shadow:0px -1px 0px rgba(0,0,0,.22);
+
+	-webkit-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	-moz-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+}
+.navigation-green li:first-child a {
+	border-left:1px solid #0f681b;
+}
+
+.navigation-black a {
+	background: -webkit-linear-gradient(top, #777777 0%,#585858 90%,#454545 100%);
+	background: -moz-linear-gradient(top, #777777 0%,#585858 90%,#454545 100%);
+	background: -o-linear-gradient(top, #777777 0%,#585858 90%,#454545 100%);
+	background: -ms-linear-gradient(top, #777777 0%,#585858 90%,#454545 100%);
+	background: linear-gradient(top, #777777 0%,#585858 90%,#454545 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#777777', endColorstr='#454545',GradientType=0 );
+	
+	border-top:1px solid #323232;
+	border-bottom:1px solid #323232;
+	border-right:1px solid #323232;
+	border-left:1px solid #9e9e9e;
+
+	color: #fff;
+	text-shadow:0px -1px 0px rgba(0,0,0,.22);
+
+	-webkit-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	-moz-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+}
+.navigation-black li:first-child a {
+	border-left:1px solid #323232;
+}
+
+
+.navigation-red a {
+	background: -webkit-linear-gradient(top, #dc4646 0%,#a73636 88%,#8e2d2d 100%);
+	background: -moz-linear-gradient(top, #dc4646 0%,#a73636 88%,#8e2d2d 100%);
+	background: -o-linear-gradient(top, #dc4646 0%,#a73636 88%,#8e2d2d 100%);
+	background: -ms-linear-gradient(top, #dc4646 0%,#a73636 88%,#8e2d2d 100%);
+	background: linear-gradient(top, #dc4646 0%,#a73636 88%,#8e2d2d 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dc4646', endColorstr='#8e2d2d',GradientType=0 );
+	
+	border-top:1px solid #850000;
+	border-bottom:1px solid #850000;
+	border-right:1px solid #850000;
+	border-left:1px solid #cf605a;
+
+	color: #fff;
+	text-shadow:0px -1px 0px rgba(0,0,0,.22);
+
+	-webkit-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	-moz-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+}
+.navigation-red li:first-child a {
+	border-left:1px solid #850000;
+}
+
+
+.navigation-purple a {
+	background: -webkit-linear-gradient(top, #e193f2 0%,#d072e4 90%,#ba5fce 100%);
+	background: -moz-linear-gradient(top, #e193f2 0%,#d072e4 90%,#ba5fce 100%);
+	background: -o-linear-gradient(top, #e193f2 0%,#d072e4 90%,#ba5fce 100%);
+	background: -ms-linear-gradient(top, #e193f2 0%,#d072e4 90%,#ba5fce 100%);
+	background: linear-gradient(top, #e193f2 0%,#d072e4 90%,#ba5fce 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e193f2', endColorstr='#ba5fce',GradientType=0 );
+	
+	border-top:1px solid #9c3cb1;
+	border-bottom:1px solid #9c3cb1;
+	border-right:1px solid #9c3cb1;
+	border-left:1px solid #e6a9f3;
+
+	color: #fff;
+	text-shadow:0px -1px 0px rgba(0,0,0,.22);
+
+	-webkit-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	-moz-box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+	box-shadow:
+		inset 0px 1px 0px rgba(255,255,255,.35),
+		0px 1px 1px rgba(0,0,0,.15);
+}
+.navigation-purple li:first-child a {
+	border-left:1px solid #9c3cb1;
+}
+
+
+
+
+
+

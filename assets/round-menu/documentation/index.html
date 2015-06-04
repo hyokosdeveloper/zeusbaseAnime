@@ -1,0 +1,374 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Pure CSS3 Round Menu - Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;Pure CSS3 Round Menu&rdquo; - Documentation by &ldquo;Novikov Aleksandr&rdquo; v1.0</h3>
+		
+		<hr>
+		
+		<h1 class="center">Pure CSS3 Round Menu</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 11/03/2013<br>
+					By: Novikov Aleksandr (Voky)<br>
+					Email: <a href="mailto:voky.com.ua@gmail.com">voky.com.ua@gmail.com</a>
+					</strong>
+				</p>
+			</div>
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing Round Menu. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://codecanyon.net/user/voky">here</a>. Thanks so much!</p>
+			</div>
+		</div>
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#htmlStructure">HTML Structure</a></li>
+			<li><a href="#cssFiles">CSS Files and Structure</a></li>
+			<li><a href="#jsFiles">JavaScript Files</a></li>
+			<li><a href="#howToIntegrate">How to Integrate</a></li>
+			<li><a href="#howToCustomize">How to Customize</a></li>
+			<li><a href="#credits">Sources and Credits</a></li>
+		</ol>		
+		<hr>
+		
+		
+		<h3 id="htmlStructure"><strong>A) HTML Structure</strong> - <a href="#toc">top</a></h3>		
+		<p>The main HTML structure of the menu consists of list items and switcher. Each item contains link, icon, and optional tooltip. Here is the structure with 5 items.</p>
+		<p><img src="assets/images/htmlstructure.jpg" width="790" height="545" alt="HTML Structure"></p>
+		<hr>
+		
+		
+		<h3 id="cssFiles"><strong>B) CSS Files and Structure</strong> - <a href="#toc">top</a></h3>		
+		<p>This menu contains three CSS files:</p>		
+		<ul>
+			<li>main.css - demo page styles.</li>
+			<li>pcss3rm.css - required menu styles.</li>
+			<li>pcss3rm-ie8.css - required styles for IE8 support.</li>
+		</ul>		
+		<p>The file "pcc3rm.css" contains all of the specific styling. The file is separated into sections:</p>
+		<ul>
+			<li>reset</li>
+			<li>basic styles</li>
+			<li>animations</li>
+			<li>postions</li>
+			<li>tooltips</li>
+			<li>shapes</li>
+			<li>icons</li>
+			<li>colors</li>
+		</ul>		
+		<p><img src="assets/images/cssstructure.jpg" width="790" height="1667" alt="CSS Structure"></p>		
+		<p>If you would like to edit a specific section, simply find the appropriate label in the CSS file.</p>		
+		<hr>
+		
+		<h3 id="jsFiles"><strong>C) JavaScript Files</strong> - <a href="#toc">top</a></h3>
+		<p>This menu uses jQuery library and contain one file "ie8.js". They need only for IE8 support, so don't include them if you don't need it.</p>		
+		<hr>
+		
+		
+		<h3 id="howToIntegrate"><strong>D) How to Integrate</strong> - <a href="#toc">top</a></h3>
+		<p>1. Include necessary CSS and JS files.</p>
+		<pre>&lt;link rel="stylesheet" href="css/pcss3rm.css"&gt;
+&lt;!--[if lt IE 9]&gt;
+	&lt;link rel="stylesheet" href="css/pcss3rm-ie8.css"&gt;
+	&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"&gt;&lt;/script&gt;
+	&lt;script src="js/ie8.js"&gt;&lt;/script&gt;
+&lt;![endif]--&gt;</pre>
+		<p>2. Copy HTML code of the menu from one of demo files.</p>
+		<p>3. Replace demo menu elements with yours.</p>
+		<hr>
+		
+		
+		<h3 id="howToCustomize"><strong>E) How to Customize</strong> - <a href="#toc">top</a></h3>		
+		<h3><strong>Animation Effects</strong></h3>
+		<p>There are 16 animation effects that you can use. All you need is to add the appropriate class to menu container. For example, if you want the "All at once + Fade" effect, class name should be: "<code>pcss3rm-effect-aao pcss3rm-effect-fade</code>". You can find all available effects and classes in table below.</p>
+		<table>
+			<tr>
+				<th style="width: 35%">Effect</th>
+				<th>Class name</th>
+			</tr>
+			<tr>
+				<td>One by one (default)</td>
+				<td>-</td>
+			</tr>
+			<tr>
+				<td>One by one + Fade</td>
+				<td><code>pcss3rm-effect-fade</code></td>
+			</tr>
+			<tr>
+				<td>One by one + Rotate</td>
+				<td><code>pcss3rm-effect-rotate</code></td>
+			</tr>
+			<tr>
+				<td>One by one + Scale</td>
+				<td><code>pcss3rm-effect-scale</code></td>
+			</tr>
+			<tr>
+				<td>One by one + Fade + Rotate</td>
+				<td><code>pcss3rm-effect-fade pcss3rm-effect-rotate</code></td>
+			</tr>
+			<tr>
+				<td>One by one + Fade + Scale</td>
+				<td><code>pcss3rm-effect-fade pcss3rm-effect-scale</code></td>
+			</tr>
+			<tr>
+				<td>One by one + Rotate + Scale</td>
+				<td><code>pcss3rm-effect-rotate pcss3rm-effect-scale</code></td>
+			</tr>
+			<tr>
+				<td>One by one + Fade + Rotate + Scale</td>
+				<td><code>pcss3rm-effect-fade pcss3rm-effect-rotate pcss3rm-effect-scale</code></td>
+			</tr>
+			<tr>
+				<td>All at ones</td>
+				<td><code>pcss3rm-effect-aao</code></td>
+			</tr>
+			<tr>
+				<td>All at ones + Fade</td>
+				<td><code>pcss3rm-effect-aao pcss3rm-effect-fade</code></td>
+			</tr>
+			<tr>
+				<td>All at ones + Rotate</td>
+				<td><code>pcss3rm-effect-aao pcss3rm-effect-rotate</code></td>
+			</tr>
+			<tr>
+				<td>All at ones + Scale</td>
+				<td><code>pcss3rm-effect-aao pcss3rm-effect-scale</code></td>
+			</tr>
+			<tr>
+				<td>All at ones + Fade + Rotate</td>
+				<td><code>pcss3rm-effect-aao pcss3rm-effect-fade pcss3rm-effect-rotate</code></td>
+			</tr>
+			<tr>
+				<td>All at ones + Fade + Scale</td>
+				<td><code>pcss3rm-effect-aao pcss3rm-effect-fade pcss3rm-effect-scale</code></td>
+			</tr>
+			<tr>
+				<td>All at ones + Rotate + Scale</td>
+				<td><code>pcss3rm-effect-aao pcss3rm-effect-rotate pcss3rm-effect-scale</code></td>
+			</tr>
+			<tr>
+				<td>All at ones + Fade + Rotate + Scale</td>
+				<td><code>pcss3rm-effect-aao pcss3rm-effect-fade pcss3rm-effect-rotate pcss3rm-effect-scale</code></td>
+			</tr>
+		</table>
+		
+		<h3><strong>Position options</strong></h3>
+		<p>There are 10 defined menu positions. To use one of them you need to add appropriate class to menu container. For example, if you want the "Top-left" position, class name should be: "<code>pcss3rm-pos-tl</code>". You can find all available positions and classes in table below.</p>
+		<table>
+			<tr>
+				<th style="width: 35%">Position</th>
+				<th>Class name</th>
+			</tr>
+			<tr>
+				<td>Top-left (max 5 items)</td>
+				<td><code>pcss3rm-pos-tl</code></td>
+			</tr>
+			<tr>
+				<td>Top (max 9 items)</td>
+				<td><code>pcss3rm-pos-t</code></td>
+			</tr>
+			<tr>
+				<td>Top-right (max 5 items)</td>
+				<td><code>pcss3rm-pos-tr</code></td>
+			</tr>
+			<tr>
+				<td>Right (max 9 items)</td>
+				<td><code>pcss3rm-pos-r</code></td>
+			</tr>
+			<tr>
+				<td>Bottom-right (max 5 items)</td>
+				<td><code>pcss3rm-pos-br</code></td>
+			</tr>
+			<tr>
+				<td>Bottom (max 9 items)</td>
+				<td><code>pcss3rm-pos-b</code></td>
+			</tr>
+			<tr>
+				<td>Bottom-left (max 5 items)</td>
+				<td><code>pcss3rm-pos-bl</code></td>
+			</tr>
+			<tr>
+				<td>Left (max 9 items)</td>
+				<td><code>pcss3rm-pos-l</code></td>
+			</tr>
+			<tr>
+				<td>Center (max 16 items)</td>
+				<td><code>pcss3rm-pos-c</code></td>
+			</tr>
+		</table>
+		
+		<h3><strong>Tooltip positions</strong></h3>
+		<p>There are 6 defined tooltip positions. To use one of them you need to add appropriate class to <code>&lt;em&gt;</code> tag. For example, if you want the "Bootom-left" position, the code of the tooltip should be: "<code>&lt;em class="bl"&gt;some text&lt;/em&gt;</code>". You can find all available positions and classes in table below.</p>
+		<table>
+			<tr>
+				<th style="width: 35%">Position</th>
+				<th>Tooltip code</th>
+			</tr>
+			<tr>
+				<td>Top-left</td>
+				<td><code>&lt;em class="tl"&gt;some text&lt;/em&gt;</code></td>
+			</tr>
+			<tr>
+				<td>Top-right</td>
+				<td><code>&lt;em class="tr"&gt;some text&lt;/em&gt;</code></td>
+			</tr>
+			<tr>
+				<td>Right</td>
+				<td><code>&lt;em class="r"&gt;some text&lt;/em&gt;</code></td>
+			</tr>
+			<tr>
+				<td>Bottom-right</td>
+				<td><code>&lt;em class="br"&gt;some text&lt;/em&gt;</code></td>
+			</tr>
+			<tr>
+				<td>Bottom-left</td>
+				<td><code>&lt;em class="bl"&gt;some text&lt;/em&gt;</code></td>
+			</tr>
+			<tr>
+				<td>Left</td>
+				<td><code>&lt;em class="l"&gt;some text&lt;/em&gt;</code></td>
+			</tr>
+		</table>
+		
+		<h3><strong>Button shape options</strong></h3>
+		<p>There are 4 possible shapes of the buttons. To use one of them you need to add appropriate class to menu container. For example, if you want the "Rounded square" shape, class name should be: "<code>pcss3rm-shape-rsquare</code>". You can find all available shapes and classes in table below.</p>
+		<table>
+			<tr>
+				<th style="width: 35%">Position</th>
+				<th>Class name</th>
+			</tr>
+			<tr>
+				<td>Circle (default)</td>
+				<td>-</td>
+			</tr>
+			<tr>
+				<td>Ellipse</td>
+				<td><code>pcss3rm-shape-ellipse</code></td>
+			</tr>
+			<tr>
+				<td>Square</td>
+				<td><code>pcss3rm-shape-square</code></td>
+			</tr>
+			<tr>
+				<td>Rounded square</td>
+				<td><code>pcss3rm-shape-rsquare</code></td>
+			</tr>
+		</table>			
+		<hr>
+		
+		<h3><strong>Icons</strong></h3>
+		<p>There are 249 font icons. To use one of them you need to add appropriate class to <code>&lt;i&gt;</code> tag. All available classes for font vector icons you can find <a href="http://fortawesome.github.com/Font-Awesome/#icons-web-app" target="_blank">here</a>.</p>
+		<hr>
+		
+		<h3><strong>Colors</strong></h3>
+		<p>There are 12 defined colors and unlimited color combinations. To use one of them you need to add appropriate class to <code>&lt;a&gt;</code> tag. For example, if you want the orange color for regular state and red color for hover state, the code should be: "<code>&lt;a class="color-orange hcolor-red"&gt;&lt;/a&gt;</code>". You can find all available colors and classes in table below.</p>
+		<table>
+			<tr>
+				<th style="width: 30%">Position</th>
+				<th>Regular state class name</th>
+				<th>Hover state class name</th>
+			</tr>
+			<tr>
+				<td>White (default)</td>
+				<td>-</td>
+				<td>-</td>
+			</tr>
+			<tr>
+				<td>Grey</td>
+				<td><code>color-grey</code></td>
+				<td><code>hcolor-grey</code></td>
+			</tr>
+			<tr>
+				<td>Black</td>
+				<td><code>color-black</code></td>
+				<td><code>hcolor-black</code></td>
+			</tr>
+			<tr>
+				<td>Red</td>
+				<td><code>color-red</code></td>
+				<td><code>hcolor-red</code></td>
+			</tr>
+			<tr>
+				<td>Orange</td>
+				<td><code>color-orange</code></td>
+				<td><code>hcolor-orange</code></td>
+			</tr>
+			<tr>
+				<td>Yellow</td>
+				<td><code>color-yellow</code></td>
+				<td><code>hcolor-yellow</code></td>
+			</tr>
+			<tr>
+				<td>Lime</td>
+				<td><code>color-lime</code></td>
+				<td><code>hcolor-lime</code></td>
+			</tr>
+			<tr>
+				<td>Green</td>
+				<td><code>color-green</code></td>
+				<td><code>hcolor-green</code></td>
+			</tr>
+			<tr>
+				<td>Cyan</td>
+				<td><code>color-cyan</code></td>
+				<td><code>hcolor-cyan</code></td>
+			</tr>
+			<tr>
+				<td>Blue</td>
+				<td><code>color-blue</code></td>
+				<td><code>hcolor-blue</code></td>
+			</tr>
+			<tr>
+				<td>Purple</td>
+				<td><code>color-purple</code></td>
+				<td><code>hcolor-purple</code></td>
+			</tr>
+			<tr>
+				<td>Pink</td>
+				<td><code>color-pink</code></td>
+				<td><code>hcolor-pink</code></td>
+			</tr>
+		</table>			
+		<hr>
+		
+		
+		<h3 id="credits"><strong>F) Sources and Credits</strong> - <a href="#toc">top</a></h3>		
+		<p>I've used the following images, icons or other files as listed.</p>
+		<ul>
+			<li><a href="http://jquery.com/">jQuery library</a> by jQuery Foundation.</li>
+			<li><a href="http://fortawesome.github.com/Font-Awesome/" target="_blank">Font Awesome</a> by Dave Gandy.</li>
+			<li><a href="http://www.behance.net/gallery/10-Blurred-Backgrounds/6801167">Blurred Backgrounds</a> by Shantha Abeyrathne.</li>
+		</ul>
+		
+		<hr>
+		
+		<p>Once again, thank you so much for purchasing this item. As I said at the beginning, I'd be glad to help you if you have any questions relating to this product. No guarantees, but I'll do my best to assist.</p> 
+		
+		<p class="append-bottom alt large"><strong>Novikov Aleksandr</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div>
+</body>
+</html>
